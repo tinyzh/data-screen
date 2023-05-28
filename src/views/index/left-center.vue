@@ -51,13 +51,11 @@ const setOption = () => {
       type: "value",
       axisLine: {
         lineStyle: {
-          color: "#000000",
-          width: 1,
-          type: "solid",
+          color: "#ffffff",
         },
       },
       splitLine: {
-        show: true,
+        show: false,
         lineStyle: {
           color: ["#262732"],
           width: 0,

@@ -508,6 +508,38 @@ binary-extensions@^2.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
+bmaplib.curveline@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/bmaplib.curveline/-/bmaplib.curveline-1.0.0.tgz#826eb0bf1c59fad1b23142be66fc360cf009aea2"
+  integrity sha512-9wcFMVhiYxNPqpvsLDAADn3qDhNzXp2mA6VyHSHg2XOAgSooC7ZiujdFhy0sp+0QYjTfJ/MjmLuNoUg2HHxH4Q==
+
+bmaplib.distancetool@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/bmaplib.distancetool/-/bmaplib.distancetool-1.0.2.tgz#12316c4e64411f0d4d7152ea03332a1619d1770c"
+  integrity sha512-EvxMnQRH6xM036zx5OLPyTg5tMCTbFBuGTTHOtExLy2/T0X6v5Va0YE7c3IPm/a/Eo5V/ynYpOLOLZbRY8ccyA==
+
+bmaplib.heatmap@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/bmaplib.heatmap/-/bmaplib.heatmap-1.0.4.tgz#30161262771fe78af35705ff92457725de5d9850"
+  integrity sha512-rmhqUARBpUSJ9jXzUI2j7dIOqnc38bqubkx/8a349U2qtw/ulLUwyzRD535OrA8G7w5cz4aPKm6/rNvUAarg/Q==
+
+bmaplib.lushu@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/bmaplib.lushu/-/bmaplib.lushu-1.0.7.tgz#77c17dcf7148d30c46e8430c7ff86b20e418b8b8"
+  integrity sha512-LVvgpESPii6xGxyjnQjq8u+ic4NjvhdCPV/RiSS/PGTUdZKeTDS7prSpleJLZH3ES0+oc0gYn8bw0LtPYUSz2w==
+
+bmaplib.markerclusterer@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.npmjs.org/bmaplib.markerclusterer/-/bmaplib.markerclusterer-1.0.13.tgz#442d71a6c40844ee47d01f6db2166b54530b5bd1"
+  integrity sha512-VrLyWSiuDEVNi0yUfwOhFQ6z1oEEHS4w36GNu3iASu6p52QIx9uAXMUkuSCHReNR0bj2Cp9SA1dSx5RpojXajQ==
+  dependencies:
+    bmaplib.texticonoverlay "^1.0.2"
+
+bmaplib.texticonoverlay@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/bmaplib.texticonoverlay/-/bmaplib.texticonoverlay-1.0.2.tgz#d78546ea0f036d9fe964983796315b6c112a05bf"
+  integrity sha512-4ZTWr4ZP3B6qEWput5Tut16CfZgII38YwM3bpyb4gFTQyORlKYryFp9WHWrwZZaHlOyYDAXG9SX0hka43jTADg==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -1868,6 +1900,11 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
+tiny-emitter@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
+  integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
@@ -2012,6 +2049,20 @@ vite@^4.3.5:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-baidu-map-3x@^1.0.34:
+  version "1.0.34"
+  resolved "https://registry.npmjs.org/vue-baidu-map-3x/-/vue-baidu-map-3x-1.0.34.tgz#556462158d57624d804304200a416940a4787cea"
+  integrity sha512-eU9VUPaL03NNoz2CXjCZCSGgaUXXcqituIm4nU1uh8Ts2kqxZ6c7IiH1ArXLmUl7yzIa0jLBiWeBtyfzDvBbBQ==
+  dependencies:
+    bmaplib.curveline "^1.0.0"
+    bmaplib.distancetool "^1.0.2"
+    bmaplib.heatmap "^1.0.4"
+    bmaplib.lushu "^1.0.7"
+    bmaplib.markerclusterer "^1.0.13"
+    tiny-emitter "^2.1.0"
+    vue "^3.2.25"
+    vue-router "^4.0.14"
+
 vue-demi@*, vue-demi@>=0.14.5:
   version "0.14.5"
   resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.5.tgz#676d0463d1a1266d5ab5cba932e043d8f5f2fbd9"
@@ -2030,7 +2081,7 @@ vue-echarts@^6.5.5:
     resize-detector "^0.3.0"
     vue-demi "^0.13.2"
 
-vue-router@^4.1.6:
+vue-router@^4.0.14, vue-router@^4.1.6:
   version "4.2.1"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.2.1.tgz#f8ab85c89e74682cad71519480fdf2b855e8c9e0"
   integrity sha512-nW28EeifEp8Abc5AfmAShy5ZKGsGzjcnZ3L1yc2DYUo+MqbBClrRP9yda3dIekM4I50/KnEwo1wkBLf7kHH5Cw==
@@ -2054,7 +2105,7 @@ vue-tsc@^1.6.4:
     "@volar/vue-typescript" "1.6.5"
     semver "^7.3.8"
 
-vue@^3.2.47:
+vue@^3.2.25, vue@^3.2.47:
   version "3.3.4"
   resolved "https://registry.npmjs.org/vue/-/vue-3.3.4.tgz#8ed945d3873667df1d0fcf3b2463ada028f88bd6"
   integrity sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==

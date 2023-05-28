@@ -72,6 +72,7 @@ getData(code.value);
 const mapClick = (params: any) => {
   console.log(params);
   let xzqData = regionCodes[params.name];
+  console.log(xzqData,'xzqData')
   if (xzqData) {
     getData(xzqData.adcode);
   } else {

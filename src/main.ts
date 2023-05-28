@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import BaiduMap from 'vue-baidu-map-3x';
 
 import App from './App.vue'
 import router from './router'
@@ -14,6 +15,9 @@ mockXHR()
 
 const app = createApp(App)
 registerEcharts(app)
+app.use(BaiduMap, {
+    ak: 'zeyZchAGo0n3fOOqxUUPUPFhvbA3DTM8'
+})
 app.use(createPinia())
 app.use(router)
 

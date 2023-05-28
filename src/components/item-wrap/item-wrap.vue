@@ -12,8 +12,13 @@
 <template>
   <div class="item-wrap">
     <div class="item_title" v-if="title !== ''">
-      <div class="title-inner"> {{title}}</div>
+      <div class="title-inner">
+        {{title}}
+      </div>
+        <slot name="dashboard"></slot>
+      
     </div>
+    <slot name="header"></slot>
     <div :class="title !== '' ? 'item_title_content' : 'item_title_content_def'">
       <div class="icon left_top"></div>
       <div class="icon right_top"></div>
@@ -45,17 +50,17 @@
 
     .title-inner {
       width: 190px;
-      height: 31px;
+      height: 39px;
       background: url("@/assets/img/titles/text.png") center center;
       background-size: cover;
       font-size: 18px;
       color: #ffffff;
       display: flex;
-      align-items: center;
       padding-left: 30px;
       position: absolute;
       left: 0;
       bottom: 6px;
+      line-height: 46px;
     }
   }
 
