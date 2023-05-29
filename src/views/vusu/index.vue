@@ -271,6 +271,7 @@ const endMark = path[path.length - 1];
       position: relative;
       display: flex;
       justify-content: center;
+      overflow: hidden;
       .search {
         width: 428px;
         height: 49px;
@@ -296,7 +297,7 @@ const endMark = path[path.length - 1];
       }
       .map {
         width: 100%;
-        height: 760px;
+        height: 820px;
       }
     }
   }

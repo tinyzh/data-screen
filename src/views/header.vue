@@ -94,6 +94,7 @@ timeFn();
   .wrap {
     position: absolute;
     display: flex;
+    top: 56px;
     &.left {
       left: 18px;
     }
