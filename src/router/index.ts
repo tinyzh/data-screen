@@ -16,6 +16,20 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/index/index.vue'),
       },
       {
+        path: '/business',
+        name: 'business',
+        component: () => import('@/views/businessMage/index.vue'),
+      },
+      {
+        path: '/pm',
+        name: 'pm',
+        component: () => import('@/views/PM/index.vue'),
+      },
+      {
+        path: '/test',
+        name: 'test',
+        component: () => import('@/views/test/right-center.vue'),
+      },{
         path: '/vusu',
         name: 'vusu',
         component: () => import('@/views/vusu/index.vue'),
