@@ -19,7 +19,7 @@ const leftRoute = [{
 }];
 const rightRoute = [{
   name: '项目管理',
-  path: '/index'
+  path: '/pm'
 }, {
   name: '考勤管理',
   path: '/vusu'
