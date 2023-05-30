@@ -27,26 +27,32 @@ import RightBottom from "./right-bottom.vue";
 
       <ItemWrap
         class="contetn_left-bottom contetn_lr-item"
-        title="项目管理"
+        title="设备提醒"
+        style="padding: 0 10px 16px 10px"
       >
         <LeftBottom />
       </ItemWrap>
     </div>
     <div class="contetn_center">
-      <CenterBottom />
+      <CenterMap class="contetn_center_top" title="设备分布图" />
+      <ItemWrap class="contetn_center-bottom" title="安装计划">
+        <CenterBottom />
+      </ItemWrap>
     </div>
-    <div class="contetn_right right-item">
-      <ItemWrap class="contetn_left-bottom contetn_lr-item" title="考勤管理">
+    <div class="contetn_right">
+      <ItemWrap class="contetn_left-bottom contetn_lr-item" title="报警次数">
         <RightTop />
       </ItemWrap>
-
       <ItemWrap
         class="contetn_left-bottom contetn_lr-item"
-        title="培训管理"
+        title="报警排名(TOP8)"
+        style="padding: 0 10px 16px 10px"
       >
         <RightCenter />
       </ItemWrap>
-      
+      <ItemWrap class="contetn_left-bottom contetn_lr-item" title="数据统计图 ">
+        <RightBottom />
+      </ItemWrap>
     </div>
   </div>
 </template>
@@ -62,22 +68,20 @@ import RightBottom from "./right-bottom.vue";
 .contetn_right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
   width: 408px;
   box-sizing: border-box;
   flex-shrink: 0;
-  padding: 10px 0;
-}
-.right-item{
-  // margin-right: 10px;
 }
 .contetn_center {
   flex: 1;
   margin: 0 82px;
-  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .contetn_center-bottom {
-    // height: 100%;
+    height: 315px;
   }
 }
 
