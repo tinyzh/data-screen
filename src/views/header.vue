@@ -22,10 +22,10 @@ const rightRoute = [{
   path: '/pm'
 }, {
   name: '考勤管理',
-  path: '/vusu'
+  path: '/kaoqin'
 },{
   name: '培训管理',
-  path: '/userManager'
+  path: '/peixun'
 }];
 
 const handleJump = (path: string) => {

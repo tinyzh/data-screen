@@ -38,7 +38,17 @@ const routes: Array<RouteRecordRaw> = [
         path: '/userManager',
         name: 'userManager',
         component: () => import('@/views/userManager/index.vue'),
-      }
+      },
+      {
+        path: '/kaoqin',
+        name: 'kaoqin',
+        component: () => import('@/views/kaoqin/index.vue'),
+      },
+      {
+        path: '/peixun',
+        name: 'peixun',
+        component: () => import('@/views/peixun/index.vue'),
+      },
     ]
   },
 ]
