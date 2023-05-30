@@ -19,14 +19,14 @@ const getData = () => {
             },
             formatter: function (params: any) {
                 return (
-                    '<span style="font-size: 20px;font-weight: bold;font-family: SourceHanSansCN;">' +
+                    '<span style="font-size: 14px;font-weight: bold;">' +
                     params[0].seriesName +
                     "</span>" +
                     "<br/>" +
                     params[0].marker +
                     '<span style="color:' +
                     params[0].color +
-                    ';font-size: 20px;font-weight: bold;font-family: SourceHanSansCN;">' +
+                    ';font-size: 14px;font-weight: bold;">' +
                     "\n" +
                     params[0].name +
                     "岁: " +
@@ -44,9 +44,9 @@ const getData = () => {
                 color: "#fff",
             },
             selectedMode: false,
-            itemWidth: 15,
-            itemHeight: 32, //图例宽高
-            itemGap: 90, //图例的间隔
+            itemWidth: 20,
+            itemHeight: 20, //图例宽高
+            itemGap: 15, //图例的间隔
             data: [
                 {
                     name: "男",
@@ -63,8 +63,8 @@ const getData = () => {
             {
                 top: "22%",
                 bottom: "2%",
-                left: "10%",
-                width: "45%",
+                left: "20%",
+                width: "40%",
                 height: "70%",
                 containLabel: true,
             },
@@ -72,16 +72,16 @@ const getData = () => {
             {
                 top: "20%",
                 bottom: "0%",
-                left: "100px", // 调整left值使图表中间信息居左显示
+                left: "60px", // 调整left值使图表中间信息居左显示
                 width: "10%",
                 height: "70%",
             },
             // 右
             {
                 top: "22%",
-                bottom: "2%",
+                bottom: "0%",
                 right: "0%",
-                width: "45%",
+                width: "40%",
                 height: "70%",
                 containLabel: true,
             },
@@ -93,7 +93,7 @@ const getData = () => {
                 show: true,
                 axisLabel: {
                     color: "#7e8daa",
-                    fontSize: "20",
+                    fontSize: "12",
                     fontWeight: "bold",
                     textStyle: {
                         fontFamily: "BoldCondensed",
@@ -125,7 +125,7 @@ const getData = () => {
                 show: true,
                 axisLabel: {
                     color: "#7e8daa",
-                    fontSize: "26",
+                    fontSize: "12",
                     fontWeight: "bold",
                     textStyle: {
                         fontFamily: "BoldCondensed",
@@ -155,7 +155,7 @@ const getData = () => {
                 show: true,
                 axisLabel: {
                     color: "#7e8daa",
-                    fontSize: "20",
+                    fontSize: "12",
                     fontWeight: "bold",
                     textStyle: {
                         fontFamily: "BoldCondensed",
@@ -195,12 +195,13 @@ const getData = () => {
                     //y轴刻度线
                     show: false,
                 },
-                data: ["16-20", "21-30", "31-40", "41-50", "51-60"],
+                data: ["16-20", "21-30", "31-40", "41-50", "51-60", '60以上'],
                 axisLine: {
                     //轴线
                     // show: false,
                     lineStyle: {
                         color: "rgba(25, 35, 57,0.2)",
+                        fontSize: "12"
                     },
                 },
                 min: 0, // 设置最小值为0
@@ -208,7 +209,7 @@ const getData = () => {
             {
                 axisLabel: {
                     color: "#7e8daa",
-                    fontSize: "20",
+                    fontSize: "12",
                     fontWeight: "bold",
                     textStyle: {
                         fontFamily: "BoldCondensed",
@@ -232,6 +233,7 @@ const getData = () => {
                     "31-40",
                     "41-50",
                     "51-60",
+                    "60以上"
                 ], //使用空格使文字居中
             },
             {
@@ -254,7 +256,7 @@ const getData = () => {
                     },
                 },
                 min: 0, // 设置最小值为0
-                data: ["16-20", "21-30", "31-40", "41-50", "51-60"],
+                data: ["16-20", "21-30", "31-40", "41-50", "51-60", "60以上"],
             },
         ],
         series: [
@@ -263,9 +265,9 @@ const getData = () => {
                 barWidth: 15,
                 name: "男",
                 itemStyle: {
-                    color: "#4f9efd",
+                    color: "#00C2E4",
                 },
-                data: [50, 15, 47, 22, 77],
+                data: [50, 15, 47, 22, 77, 12],
             },
             {
                 type: "bar",
@@ -274,9 +276,9 @@ const getData = () => {
                 yAxisIndex: 2,
                 name: "女",
                 itemStyle: {
-                    color: "#fc5a5a",
+                    color: "#F2BC0A",
                 },
-                data: [20, 5, 30, 46, 16],
+                data: [20, 5, 30, 46, 16, 6],
             },
         ],
     };
@@ -299,6 +301,11 @@ onMounted(() => {
     width: 100%;
     height: 360px;
     padding: 35px 0px;
+    display: flex;
+    justify-content: center;
+    .chart{
+      width: 350px;
+    }
 
 }
 </style>

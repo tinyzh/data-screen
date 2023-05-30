@@ -2,7 +2,7 @@
 import { useSettingStore } from "@/stores/index";
 import { ref } from "vue";
 import {storeToRefs} from "pinia"
-const isScaleRadio = ref(false);
+const isScaleRadio = ref(true);
 const leftBottomRadio=ref(true)
 const rightBottomRadio=ref(true)
 const settingStore = useSettingStore();
