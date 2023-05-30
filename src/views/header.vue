@@ -1,25 +1,37 @@
 <script setup lang="ts">
 import { reactive } from "vue";
-import dayjs from "dayjs";
-import type { DateDataType } from "./index.d";
-import { useSettingStore } from "@/stores/index";
+import {useRoute, useRouter} from 'vue-router';
 
-const dateData = reactive<DateDataType>({
-  dateDay: "",
-  dateYear: "",
-  dateWeek: "",
-  timing: null,
-});
+const route = useRoute();
+const router = useRouter()
+const leftRoute = [{
+  name: '总览',
+  path: '/index'
+}, {
+  name: '可视化',
+  path: '/vusu'
+},{
+  name: '人员管理',
+  path: '/userManager'
+},{
+  name: '企业管理',
+  path: '/business'
+}];
+const rightRoute = [{
+  name: '项目管理',
+  path: '/index'
+}, {
+  name: '考勤管理',
+  path: '/vusu'
+},{
+  name: '培训管理',
+  path: '/userManager'
+}];
 
-const { setSettingShow } = useSettingStore();
-const weekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
-const timeFn = () => {
-  dateData.timing = setInterval(() => {
-    dateData.dateDay = dayjs().format("YYYY-MM-DD hh : mm : ss");
-    dateData.dateWeek = weekday[dayjs().day()];
-  }, 1000);
-};
-timeFn();
+const handleJump = (path: string) => {
+  router.push(path)
+}
+
 </script>
 
 <template>
@@ -27,37 +39,19 @@ timeFn();
     <div class="d-flex jc-center">
       <div class="title"></div>
       <div class="wrap left">
-        <div class="item">
-          <div class="text">总览</div>
+        <div v-for="(item,idx) of leftRoute" :key="idx" :class="{item: true, active: route.path.includes(item.path)}" @click="handleJump(item.path)">
+          <div class="text">{{ item.name }}</div>
         </div>
-        <div class="item">
-          <div class="text">可视化</div>
-        </div>
-        <div class="item">
-          <div class="text">人员管理</div>
-        </div>
-        <div class="item">
-          <div class="text">企业管理</div>
-        </div>
+        
       </div>
 
       <div class="wrap right">
-        <div class="item">
-          <div class="text">项目管理</div>
-        </div>
-        <div class="item">
-          <div class="text">考勤管理</div>
-        </div>
-        <div class="item">
-          <div class="text">培训管理</div>
+        <div v-for="(item,idx) of rightRoute" :key="idx" :class="{item: true, active: route.path.includes(item.path)}" @click="handleJump(item.path)">
+          <div class="text">{{ item.name }}</div>
         </div>
       </div>
     </div>
-    <div class="timers">
-      <div class="setting_icon" @click="setSettingShow(true)">
-        <img src="@/assets/img/headers/setting.png" alt="设置" />
-      </div>
-    </div>
+    
   </div>
 </template>
 
@@ -70,26 +64,6 @@ timeFn();
   position: relative;
   margin-bottom: 4px;
   padding-top: 10px;
-
-  .timers {
-    position: absolute;
-    right: 0;
-    top: 30px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-
-    .setting_icon {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      margin-left: 12px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
 
   .wrap {
     position: absolute;
